@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">To-Do Compose</string>
 
-
     <string name="add_button">Botão Adicionar</string>
+    <string name="search_action">Buscar Tasks</string>
+    <string name="sort_action">Ordenar Tasks</string>
+    <string name="delete_all_action">Apagar Tudo</string>
+
 </resources>
