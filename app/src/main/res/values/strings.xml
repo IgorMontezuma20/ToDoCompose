@@ -5,5 +5,9 @@
     <string name="search_action">Buscar Tasks</string>
     <string name="sort_action">Ordenar Tasks</string>
     <string name="delete_all_action">Apagar Tudo</string>
+    <string name="list_screen_title">Tasks</string>
+    <string name="search_placeholder">Pesquisar</string>
+    <string name="search_icon">Icone Pesquisa</string>
+    <string name="close_icon">Icone Fechar</string>
 
 </resources>
