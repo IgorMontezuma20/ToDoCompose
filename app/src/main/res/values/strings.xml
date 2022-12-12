@@ -11,5 +11,7 @@
     <string name="close_icon">Icone Fechar</string>
     <string name="sad_face_icon">Ícone de Rosto Triste</string>
     <string name="empty_content">Nenhuma tarefa encontrada.</string>
+    <string name="add_task">Adicionar Tarefa</string>
+    <string name="back_arrow">Voltar</string>
 
 </resources>
