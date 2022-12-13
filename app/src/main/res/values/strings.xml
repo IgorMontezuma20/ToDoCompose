@@ -13,5 +13,7 @@
     <string name="empty_content">Nenhuma tarefa encontrada.</string>
     <string name="add_task">Adicionar Tarefa</string>
     <string name="back_arrow">Voltar</string>
+    <string name="delete_icon">Ícone Deletar</string>
+    <string name="update_icon">Ícone Atualizar</string>
 
 </resources>
