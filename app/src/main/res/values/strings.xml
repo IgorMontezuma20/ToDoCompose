@@ -15,5 +15,6 @@
     <string name="back_arrow">Voltar</string>
     <string name="delete_icon">Ícone Deletar</string>
     <string name="update_icon">Ícone Atualizar</string>
+    <string name="drop_down_arrow">Drop-Down Arrow</string>
 
 </resources>
