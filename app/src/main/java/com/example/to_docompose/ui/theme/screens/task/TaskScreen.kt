@@ -1,8 +1,11 @@
 package com.example.to_docompose.ui.theme.screens.task
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.platform.LocalContext
 import com.example.to_docompose.data.models.Priority
 import com.example.to_docompose.data.models.ToDoTask
 import com.example.to_docompose.ui.theme.vielModels.SharedViewModel
@@ -18,11 +21,23 @@ fun TaskScreen(
     val description: String by sharedViewModel.description
     val priority: Priority by sharedViewModel.priority
 
+    val context = LocalContext.current
+
     Scaffold(
         topBar = {
             TaskAppBar(
                 selectedTask = selectedTask,
-                navigateToListScreen = navigateToListScreen
+                navigateToListScreen = { action ->
+                    if(action == Action.NO_ACTION){
+                        navigateToListScreen(action)
+                    }else{
+                        if(sharedViewModel.validateFields()){
+                            navigateToListScreen(action)
+                        }else{
+                            displayToast(context =context )
+                        }
+                    }
+                }
             )
         },
         content = {
@@ -42,4 +57,12 @@ fun TaskScreen(
         }
     )
 
+}
+
+fun displayToast(context: Context) {
+    Toast.makeText(
+        context,
+        "Preencha todos os campos.",
+        Toast.LENGTH_SHORT
+    ).show()
 }
