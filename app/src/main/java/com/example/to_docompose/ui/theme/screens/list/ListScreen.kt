@@ -1,13 +1,11 @@
 package com.example.to_docompose.ui.theme.screens.list
 
-import android.util.Log
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import com.example.to_docompose.R
 import com.example.to_docompose.ui.theme.fabBackgroundColor
 import com.example.to_docompose.ui.theme.vielModels.SharedViewModel
@@ -27,6 +25,8 @@ fun ListScreen(
     val action by sharedViewModel.action
 
     val allTasks by sharedViewModel.allTasks.collectAsState()
+
+    val searchedTasks by sharedViewModel.searchedTasks.collectAsState()
 
     val searchAppBarState: SearchAppBarState
             by sharedViewModel.searchAppBarState
@@ -57,8 +57,10 @@ fun ListScreen(
         },
         content = {
             ListContent(
-                tasks = allTasks,
-                navigateToTaskScreen
+                allTasks = allTasks,
+                searchedTasks = searchedTasks,
+                searchAppBarState = searchAppBarState,
+                navigateToTaskScreen = navigateToTaskScreen
             )
         },
         floatingActionButton = {
